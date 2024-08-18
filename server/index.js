@@ -21,6 +21,7 @@ app.get("/", async (req, res) => {
 
 const startServer = async () => {
   try {
+    // console.log(process.env.MONGODB_URL);
     connectDB(process.env.MONGODB_URL);
     // special url of our mongodb atlas
     app.listen(8080, () => {
